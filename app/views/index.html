@@ -72,7 +72,7 @@
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
-      var socket = io("http://192.168.106.175:3000");
+      var socket = io();
 
       var messages = document.getElementById("messages");
       var form = document.getElementById("form");
@@ -91,6 +91,14 @@
         item.textContent = msg;
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
+      });
+
+      socket.on("chat history", function (history) {
+        history.forEach(function (msg) {
+          var item = document.createElement("li");
+          item.textContent = msg;
+          messages.appendChild(item);
+        });
       });
     </script>
   </body>
