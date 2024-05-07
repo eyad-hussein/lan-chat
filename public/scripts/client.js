@@ -6,6 +6,7 @@ const input = document.getElementById("input");
 const ul = document.querySelector("ul");
 const ip = window.location.hostname;
 const nickname = prompt("What is your nickname?") || ip;
+let num_users = 1;
 socket.emit("nickname", nickname);
 
 input.focus();
@@ -35,6 +36,11 @@ socket.on("chat history", function (history) {
     });
 });
 
+socket.on('num_users', function (num) {
+    num_users = num;
+    document.getElementById("user-number").innerHTML = num_users;
+}
+);
 // define a function that takes as input the received_message and appends the li to messages
 function appendMessage(received_message) {
     const item = document.createElement("li");

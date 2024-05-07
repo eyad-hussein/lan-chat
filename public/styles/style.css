@@ -129,3 +129,21 @@ h1 {
     display: block;
     /* Ensures the div behaves as a block element */
 }
+
+#user-count {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    /* Increased font size for visibility */
+    color: #fff;
+    /* White text color */
+    background-color: #333;
+    /* Dark background color */
+    padding: 20px;
+    /* Increased padding for better spacing */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    /* Different font family */
+}
