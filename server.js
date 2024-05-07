@@ -5,7 +5,6 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 const PORT = 5000;
-// const LAN_IP = "192.168.106.175";
 
 let chatHistory = [];
 let user_ip_to_nickname = {};
