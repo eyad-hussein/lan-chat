@@ -1,0 +1,109 @@
+body {
+    margin: 5% 20%;
+    padding-bottom: 3rem;
+    font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    background-color: #121212;
+    /* Dark grey background for less strain */
+    color: #90ee90;
+    /* Soft green for text */
+    font-weight: normal;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    /* Brighter text for headings */
+    margin-bottom: 2rem;
+}
+
+#form {
+    background: rgba(255, 255, 255, 0.1);
+    /* Slightly lighter form background for contrast */
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 50px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+    /* Subtle blur effect */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    /* Adds a subtle border */
+    margin: 0 20%;
+}
+
+#input {
+    border: 1px solid #90ee90;
+    /* Matching border color */
+    padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 20px;
+    background: #202020;
+    /* Slightly lighter input background */
+    color: #fff;
+    /* White text for input */
+}
+
+#input:focus {
+    outline: none;
+    border-color: #40e0d0;
+    /* Cyan highlight for focus */
+}
+
+#form>button {
+    background: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    /* Indicates the element is clickable */
+    transition: background-color 0.3s;
+}
+
+#form>button:hover {
+    background-color: #555;
+    /* Darker on hover for feedback */
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 80vh;
+    overflow-y: auto;
+    /* Allows scrolling */
+}
+
+#messages>li {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    position: relative;
+}
+
+#messages>li>p {
+    /* make it wrap around the next line not only in one line */
+    white-space: pre-wrap;
+}
+
+#messages>li.others {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    text-align: left;
+}
+
+#messages>li.me {
+    background: rgba(144, 238, 144, 0.1);
+    border-radius: 10px;
+    text-align: right;
+}
+
+#messages>li>div {
+    font-size: 0.9rem;
+    /* Slightly larger font for readability */
+}
