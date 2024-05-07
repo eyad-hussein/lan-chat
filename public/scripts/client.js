@@ -39,8 +39,9 @@ socket.on("chat history", function (history) {
 function appendMessage(received_message) {
     const item = document.createElement("li");
     item.innerHTML = `
+    <div class='nickname'>${received_message['nickname']}</div>
     <p>${received_message['msg']}</p>
-    <div>${received_message['nickname']}</div>
+    <div class='time_stamp'>${received_message['time_stamp']}</div>
     `;
     if (received_message['nickname'] === nickname) {
         item.setAttribute("class", "me");

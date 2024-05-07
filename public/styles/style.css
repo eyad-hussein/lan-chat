@@ -87,8 +87,12 @@ h1 {
 }
 
 #messages>li>p {
-    /* make it wrap around the next line not only in one line */
     white-space: pre-wrap;
+    /* Ensures text wraps and whitespace is preserved */
+    overflow-wrap: break-word;
+    /* Ensures long words do not overflow */
+    margin: 0;
+    /* Removes default margin */
 }
 
 #messages>li.others {
@@ -105,5 +109,23 @@ h1 {
 
 #messages>li>div {
     font-size: 0.9rem;
-    /* Slightly larger font for readability */
+    /* change color to a nickname color */
+    color: #40e0d0;
+    /* Cyan text for the nickname */
+    margin-bottom: 0.25rem;
+}
+
+#messages>li>div.nickname {
+    background-color: #4a4a4a;
+    /* Dark gray background */
+    color: #f0f0f0;
+    /* Light gray text */
+    padding: 0.5rem;
+    /* Padding around text */
+    margin-bottom: 0.25rem;
+    /* Space below each div */
+    border-radius: 5px;
+    /* Rounded corners */
+    display: block;
+    /* Ensures the div behaves as a block element */
 }

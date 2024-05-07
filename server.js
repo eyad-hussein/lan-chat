@@ -18,7 +18,7 @@ io.on("connection", (socket) => {
   socket.emit("chat history", chatHistory);
 
   socket.on("chat message", (received_message) => {
-    received_message = { ...received_message, nickname: user_ip_to_nickname[user_ip] };
+    received_message = { ...received_message, nickname: user_ip_to_nickname[user_ip], time_stamp: new Date().toLocaleTimeString() };
     chatHistory.push([received_message]);
     io.emit("chat message", received_message);
   });
